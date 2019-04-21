@@ -15,11 +15,8 @@ class Student
     float id_;
     double midtermg_, finalg_;
     double grade;
-    
-    static char letterGrade;
-    
-
-
+    static char letterGrade;           //Make this an array like char letterGrade = ['A','B','C','D','F']; when initiazlizing outside of class
+                                       //Also if you want to go my route you might want to put that in the grader class
     public:
     void setName(const string);
     void setID(const float);
@@ -31,10 +28,10 @@ class Student
     double getMidTermG() const;
     double getFinalG() const;
     
-    double calcSemGrade() const;
-    Student(string, float, double, double, char);
-    Student();
-    static char getletterGrade()
+    double calcSemGrade() const;                     
+    Student(string, float, double, double, char);    
+    Student();                                       //Default constructor
+    static char getletterGrade()                     
     {
     return letterGrade;
     }
