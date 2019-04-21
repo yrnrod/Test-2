@@ -4,19 +4,19 @@ using namespace std;
 
 void Student::setName(const string name)
 {
-    name_ = name;
+    this->name_ = name;
 }
 void Student::setID(const float id)
 {
-    id_ = id;
+    this->id_ = id;
 }
 void Student::setMidTermG(const double midtermg)
 {
-    midtermg_ = midtermg;
+    this->midtermg_ = midtermg;
 }
 void Student::setFinalG(const double finalg)
 {
-    finalg_ = finalg;
+    this->finalg_ = finalg;
 }
 string Student::getName() const
 {
@@ -39,23 +39,23 @@ double Student::calcSemGrade() const
   
    double grade = (midtermg_ + finalg_)/2;
     
- if(grade <= 59) 
+ if(grade <60) 
  {
      cout << "You have a current grade of a F." << endl;
  }
-    else if(grade <= 69)
+    else if(grade <70)
     {
         cout << "You have a current grade of a D." << endl;
     }
-    else if(grade <= 79)
+    else if(grade <80)
     {
         cout << "You have a current grade of a C." << endl;
     }
-    else if(grade <= 89)
+    else if(grade <90)
     {
         cout << "You have a current grade of a B." << endl;
     }
-    else (grade >= 90);
+    else
     {
         cout << "You have a current grade of an A." << endl;
     }
